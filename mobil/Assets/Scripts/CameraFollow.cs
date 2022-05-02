@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        Offset = camTransform.position - Target.position;
+        Offset = camTransform.position;
     }
 
     private void LateUpdate()
