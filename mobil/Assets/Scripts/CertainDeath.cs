@@ -18,7 +18,7 @@ public class CertainDeath : MonoBehaviour
       
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider Player)
     {
         Debug.Log("öldün gg");
     }

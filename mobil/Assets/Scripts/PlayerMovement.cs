@@ -12,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
     Quaternion startRotation;
     Vector3 currentPos;
     Vector3 lastPos;
+    public bool isGrounded;
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
 
     void Start()
     {
@@ -27,10 +33,13 @@ public class PlayerMovement : MonoBehaviour
           rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.X))
+        
+        if (isGrounded == true)
         {
-
-            rb.AddTorque(0, 0, torque, ForceMode.Force);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rb.AddTorque(0, 0, thrust, ForceMode.Impulse);
+            }
         }
 
         currentPos = transform.position;
@@ -40,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
             if (currentPos == lastPos)
             {
                 
-                gameObject.transform.position = startPosition;
-                gameObject.transform.rotation = startRotation;
+                //gameObject.transform.position = startPosition;
+                //gameObject.transform.rotation = startRotation;
                 Debug.Log("Not moving");
             }
         }
@@ -52,9 +61,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("öldün gg");
-        gameObject.transform.position = startPosition;
-        gameObject.transform.rotation = startRotation;
+        if (other.gameObject.name == "Player")
+        {
+            Debug.Log("öldün gg");
+            gameObject.transform.position = startPosition;
+            gameObject.transform.rotation = startRotation;
+        }
+            
     }
 
 }
