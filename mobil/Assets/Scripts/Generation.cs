@@ -9,6 +9,7 @@ public class Generation : MonoBehaviour
     public GameObject Prefab2;
     public GameObject Prefab3;
     public GameObject spawnPoint;
+    Collider platformColl;
     
 
     void Start()
@@ -16,13 +17,29 @@ public class Generation : MonoBehaviour
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
+        platformColl = GetComponent<Collider>();
         
 
     }
 
-    private void OnTriggerEnter(Collider Platform)
+    private void OnTriggerEnter(Collider platformColl)
     {
-        int prefabIndex = UnityEngine.Random.Range(0, 3);
-        Instantiate(prefabList[prefabIndex], spawnPoint.transform.position, spawnPoint.transform.rotation);
+        if (platformColl.gameObject.tag == "Platform")
+        {
+            int prefabIndex = UnityEngine.Random.Range(0, 3);
+            Instantiate(prefabList[prefabIndex], spawnPoint.transform.position, spawnPoint.transform.rotation);
+        }
+                
+    }
+
+    //private void OnTriggerExit(Collider collider)
+    //{
+        //Destroy(this.gameObject);            
+    //}
+
+    void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
+        
     }
 }
