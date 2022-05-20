@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpAmount = 20;
     bool holdTouch;
     Touch touchInfo;
-    Collider playerColl;
 
     void OnCollisionStay()
     {
@@ -30,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
        rb = GetComponent<Rigidbody>();
        startPosition = gameObject.transform.position;
        startRotation = gameObject.transform.rotation;
-       playerColl = GetComponent<Collider>();
     }
 
     void FixedUpdate()
@@ -93,14 +91,14 @@ public class PlayerMovement : MonoBehaviour
         lastPos = currentPos;
     }
 
-    private void OnTriggerEnter(Collider playerColl)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (playerColl.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Platform")
         {
            Debug.Log("öldün gg");
            gameObject.transform.position = startPosition;
            gameObject.transform.rotation = startRotation;
-            FindObjectOfType<AudioManager>().Play("Death");
+           FindObjectOfType<AudioManager>().Play("Death");
         }
             
                     

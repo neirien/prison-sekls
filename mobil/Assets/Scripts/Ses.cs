@@ -12,4 +12,5 @@ public class Ses
     public float pitch;
     [HideInInspector]
     public AudioSource source;
+    public bool loop;
 }

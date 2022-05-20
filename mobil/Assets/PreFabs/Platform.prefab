@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8118485057635491384}
   - component: {fileID: 8118485057635491385}
   - component: {fileID: 8118485057635491388}
-  - component: {fileID: 8118485057635491389}
+  - component: {fileID: 8482770036585944313}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -141,7 +141,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0037513745, y: 7.424935, z: 1}
   m_Center: {x: 0.42440256, y: 4.4890847, z: 0}
---- !u!114 &8118485057635491389
+--- !u!114 &8482770036585944313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
