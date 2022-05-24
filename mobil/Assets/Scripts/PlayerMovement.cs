@@ -96,9 +96,9 @@ public class PlayerMovement : MonoBehaviour
         if (collider.gameObject.tag == "Platform")
         {
            Debug.Log("öldün gg");
-           gameObject.transform.position = startPosition;
-           gameObject.transform.rotation = startRotation;
-           FindObjectOfType<AudioManager>().Play("Death");
+           //gameObject.transform.position = startPosition;
+           //gameObject.transform.rotation = startRotation;
+           //FindObjectOfType<AudioManager>().Play("Death");
         }
             
                     
