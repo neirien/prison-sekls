@@ -37,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
         //if (Input.GetKey(KeyCode.Space))
         //{
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2106e5083343d2ceaa53efd6db3c72ca44001443
         //}
 
 
