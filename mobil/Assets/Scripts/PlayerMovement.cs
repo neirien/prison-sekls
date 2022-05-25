@@ -33,11 +33,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
-        }
-            
+        rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
+
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+
+        //}
+
 
         rb.AddForce(Physics.gravity * (gravityScale - 1) * rb.mass);
 
