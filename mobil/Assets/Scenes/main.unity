@@ -123,9 +123,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2689155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5832384736120183039, guid: c04e7b446acc49445bbb6dce94081573, type: 3}
+--- !u!4 &2689162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5832384736120183013, guid: c04e7b446acc49445bbb6dce94081573, type: 3}
   m_PrefabInstance: {fileID: 661119616}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &108421522
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 108421525}
   - component: {fileID: 108421524}
   - component: {fileID: 108421526}
+  - component: {fileID: 108421527}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -155,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108421522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.83, z: -10}
+  m_LocalPosition: {x: -15.54, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -219,15 +220,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108421522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5dff71f5e129b40b485f1da80e858f, type: 3}
+  m_Script: {fileID: 11500000, guid: 69be692b6f281544bba5c4bd106a56b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  minDistance: 10
-  target: {fileID: 2689155}
-  offset: {x: 0, y: 0, z: 10}
+  Target: {fileID: 2689162}
+  camTransform: {fileID: 108421523}
+  Offset: {x: 0, y: 0, z: -10}
+  SmoothTime: 0.3
+  velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &108421527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108421522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ca09c80d86a9843a76eca0cb3ea00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2689162}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &281700403
 GameObject:
   m_ObjectHideFlags: 0
