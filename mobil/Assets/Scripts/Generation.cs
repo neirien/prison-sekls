@@ -37,7 +37,7 @@ public class Generation : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
-        
+        //Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }

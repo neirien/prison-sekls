@@ -33,11 +33,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
-        }
-            
+        rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
+
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //}
+
 
         rb.AddForce(Physics.gravity * (gravityScale - 1) * rb.mass);
 
@@ -45,16 +46,16 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == false)
         {
 
-            //if (holdTouch == true)
-            if (Input.GetKey(KeyCode.Z))
+            //if (Input.GetKey(KeyCode.Z))
+            if (holdTouch == true)            
             {
                 rb.AddTorque(0, 0, torque, ForceMode.Impulse);
             }
         }
 
 
-        //if (Input.touchCount > 0 && isGrounded)
-        if (Input.GetKey(KeyCode.Z) && isGrounded)
+        //if (Input.GetKey(KeyCode.Z) && isGrounded)
+            if (Input.touchCount > 0 && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpAmount);
             jumping = true;

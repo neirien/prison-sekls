@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2689155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5832384736120183039, guid: c04e7b446acc49445bbb6dce94081573, type: 3}
-  m_PrefabInstance: {fileID: 661119616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &108421522
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108421522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.83, z: -10}
+  m_LocalPosition: {x: -13.72, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -221,13 +216,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 108421522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5dff71f5e129b40b485f1da80e858f, type: 3}
+  m_Script: {fileID: 11500000, guid: 69be692b6f281544bba5c4bd106a56b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  minDistance: 10
-  target: {fileID: 2689155}
-  offset: {x: 0, y: 0, z: 10}
+  target: {fileID: 661119617}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &281700403
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c04e7b446acc49445bbb6dce94081573, type: 3}
+--- !u!4 &661119617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5832384736120183013, guid: c04e7b446acc49445bbb6dce94081573, type: 3}
+  m_PrefabInstance: {fileID: 661119616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &814140139
 GameObject:
   m_ObjectHideFlags: 0
