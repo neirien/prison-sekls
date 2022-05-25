@@ -47,16 +47,16 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == false)
         {
 
-            //if (Input.GetKey(KeyCode.Z))
-            if (holdTouch == true)
+            //if (holdTouch == true)
+            if (Input.GetKey(KeyCode.Z))
             {
                 rb.AddTorque(0, 0, torque, ForceMode.Impulse);
             }
         }
 
 
-        //if (Input.GetKey(KeyCode.Z) && isGrounded)
-        if (Input.touchCount > 0 && isGrounded)       
+        //if (Input.touchCount > 0 && isGrounded)
+        if (Input.GetKey(KeyCode.Z) && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpAmount);
             jumping = true;
